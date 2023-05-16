@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42b9bc1a-ef71-4d69-8e02-439744e458d7" name="Changes" comment="put method">
+    <list default="true" id="42b9bc1a-ef71-4d69-8e02-439744e458d7" name="Changes" comment="get">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
@@ -59,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684234405716</updated>
-      <workItem from="1684234407108" duration="4746000" />
+      <workItem from="1684234407108" duration="7606000" />
     </task>
     <task id="LOCAL-00001" summary="hello world">
       <created>1684234491062</created>
@@ -82,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684239051285</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="get">
+      <created>1684239771159</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684239771161</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +99,7 @@
     <MESSAGE value="hello world" />
     <MESSAGE value="BST class" />
     <MESSAGE value="put method" />
-    <option name="LAST_COMMIT_MESSAGE" value="put method" />
+    <MESSAGE value="get" />
+    <option name="LAST_COMMIT_MESSAGE" value="get" />
   </component>
 </project>

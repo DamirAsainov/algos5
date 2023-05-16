@@ -32,10 +32,7 @@ public class BST<K extends Comparable<K>, V> {
 
     public V get(K key) {
         Node res = getRec(root, key);
-        if(res == null){
-            return null;
-        }
-        return res.val;
+        return res == null ? null : res.val;
     }
 
     private Node getRec(Node currentNode, K key){
@@ -52,8 +49,39 @@ public class BST<K extends Comparable<K>, V> {
     }
 
     public void delete(K key) {
+        root = delRec(root,key);
     }
 
+    private Node delRec(Node currentNode, K key){
+        if(currentNode == null){
+            return null;
+        }
+        else if(currentNode.key.compareTo(key) > 0){
+            currentNode.right = delRec(currentNode.right, key);
+        }
+        else if(currentNode.key.compareTo(key) < 0){
+            currentNode.left = delRec(currentNode.left, key);
+        }
+        else{
+            if(currentNode.left == null && currentNode.right == null){
+                return null;
+            } else if (currentNode.left == null) {
+                return currentNode.right;
+            } else if (currentNode.right == null) {
+                return currentNode.left;
+            } else {
+                Node minNode = minNode(currentNode.right);
+                currentNode.key = minNode.key;
+                currentNode.val = minNode.val;
+                currentNode.right = delRec(currentNode.right, minNode.key);
+            }
+        }
+        return currentNode;
+    }
+
+    private Node minNode(Node currentNode){
+        return currentNode.left == null ? currentNode : minNode(currentNode.left);
+    }
     public Iterable<K> iterator() {
         return null;
     }
