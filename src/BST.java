@@ -31,7 +31,24 @@ public class BST<K extends Comparable<K>, V> {
     }
 
     public V get(K key) {
-        return null;
+        Node res = getRec(root, key);
+        if(res == null){
+            return null;
+        }
+        return res.val;
+    }
+
+    private Node getRec(Node currentNode, K key){
+        if(currentNode == null){
+            return null;
+        }
+        else if(currentNode.key.compareTo(key) > 0){
+            return getRec(currentNode.right, key);
+        }else if (currentNode.key.compareTo(key) < 0){
+            return getRec(currentNode.left, key);
+        } else{
+            return currentNode;
+        }
     }
 
     public void delete(K key) {
@@ -39,5 +56,9 @@ public class BST<K extends Comparable<K>, V> {
 
     public Iterable<K> iterator() {
         return null;
+    }
+
+    public int getSize() {
+        return size;
     }
 }
