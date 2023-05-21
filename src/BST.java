@@ -1,6 +1,11 @@
 import java.util.Iterator;
 import java.util.Stack;
 
+/*
+ * Binary Search Tree implementation.
+ * @param <K> the type of keys stored in the tree (must be comparable)
+ * @param <V> the type of values associated with the keys
+ */
 public class BST<K extends Comparable<K>, V> implements Iterable<BST.Node> {
     private Node root;
     private int size;
@@ -14,6 +19,12 @@ public class BST<K extends Comparable<K>, V> implements Iterable<BST.Node> {
             this.key = key;
             this.val = val;
         }
+        /*
+         * Constructs a new node with the specified key and value.
+         * @param key the key of the node
+         * @param val the value associated with the key
+         */
+
         public K getKey(){
             return key;
         }
@@ -24,6 +35,11 @@ public class BST<K extends Comparable<K>, V> implements Iterable<BST.Node> {
     public void put(K key, V val) {
         root = putRec(root, key, val);
     }
+    /*
+     * Inserts a key-value pair into the tree.
+     * @param key the key to insert
+     * @param val the value associated with the key
+     */
 
     private Node putRec(Node currentNode, K key, V val){
         if(currentNode == null){
@@ -60,6 +76,10 @@ public class BST<K extends Comparable<K>, V> implements Iterable<BST.Node> {
     public void delete(K key) {
         root = delRec(root,key);
     }
+    /*
+     * Deletes a node with the specified key from the tree.
+     * @param key the key to delete
+     */
 
     private Node delRec(Node currentNode, K key){
         if(currentNode == null){
@@ -94,6 +114,11 @@ public class BST<K extends Comparable<K>, V> implements Iterable<BST.Node> {
     public Iterator<BST.Node> iterator(){
         return new BSTIterator();
     }
+    /*
+     * Returns an iterator over the nodes of the tree.
+     * @return an iterator over nodes
+     */
+
     private class BSTIterator implements Iterator<BST.Node> {
         private Stack<Node> stack;
 
@@ -125,4 +150,8 @@ public class BST<K extends Comparable<K>, V> implements Iterable<BST.Node> {
     public int getSize() {
         return size;
     }
+    /*
+     * Returns the size of the tree.
+     * @return the size
+     */
 }
