@@ -1,8 +1,11 @@
-public class BST<K extends Comparable<K>, V> {
+import java.util.Iterator;
+import java.util.Stack;
+
+public class BST<K extends Comparable<K>, V> implements Iterable<BST.Node> {
     private Node root;
     private int size;
 
-    private class Node {
+    public class Node {
         private K key;
         private V val;
         private Node left, right;
@@ -10,6 +13,12 @@ public class BST<K extends Comparable<K>, V> {
         public Node(K key, V val) {
             this.key = key;
             this.val = val;
+        }
+        public K getKey(){
+            return key;
+        }
+        public V getVal(){
+            return val;
         }
     }
     public void put(K key, V val) {
@@ -82,8 +91,35 @@ public class BST<K extends Comparable<K>, V> {
     private Node minNode(Node currentNode){
         return currentNode.left == null ? currentNode : minNode(currentNode.left);
     }
-    public Iterable<K> iterator() {
-        return null;
+    public Iterator<BST.Node> iterator(){
+        return new BSTIterator();
+    }
+    private class BSTIterator implements Iterator<BST.Node> {
+        private Stack<Node> stack;
+
+        public BSTIterator() {
+            stack = new Stack<>();
+            pushLeftNodes(root);
+        }
+
+        @Override
+        public boolean hasNext() {
+            return !stack.isEmpty();
+        }
+
+        @Override
+        public Node next() {
+            Node current = stack.pop();
+            pushLeftNodes(current.right);
+            return current;
+        }
+
+        private void pushLeftNodes(Node node) {
+            while (node != null) {
+                stack.push(node);
+                node = node.left;
+            }
+        }
     }
 
     public int getSize() {
