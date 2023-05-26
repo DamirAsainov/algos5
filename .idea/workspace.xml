@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42b9bc1a-ef71-4d69-8e02-439744e458d7" name="Changes" comment="comments">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="42b9bc1a-ef71-4d69-8e02-439744e458d7" name="Changes" comment="contains">
       <change beforePath="$PROJECT_DIR$/src/BST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
       <workItem from="1684234407108" duration="10811000" />
       <workItem from="1684463293318" duration="87000" />
       <workItem from="1684692128091" duration="4633000" />
-      <workItem from="1685068859409" duration="729000" />
+      <workItem from="1685068859409" duration="1219000" />
     </task>
     <task id="LOCAL-00001" summary="hello world">
       <created>1684234491062</created>
@@ -119,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684695922939</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="contains">
+      <created>1685069722548</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685069722548</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,7 +140,8 @@
     <MESSAGE value="delete method" />
     <MESSAGE value="iterator method" />
     <MESSAGE value="comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="comments" />
+    <MESSAGE value="contains" />
+    <option name="LAST_COMMIT_MESSAGE" value="contains" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

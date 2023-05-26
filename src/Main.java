@@ -16,8 +16,10 @@ public class Main {
         for(var elem: bst){
             System.out.println("key is " + elem.getKey() + " and value is " + elem.getVal());
         }
-        System.out.println(bst.contains(8));
-        System.out.println(bst.contains(9));
-        System.out.println(bst.contains(4));
+        System.out.println();
+        System.out.println("BST contains 8 - " + bst.contains(8));
+        System.out.println("BST contains 9 - " + bst.contains(9));
+        System.out.println("BST contains 4 - " + bst.contains(4));
+        System.out.println("BST contains 6 - " + bst.contains(6));
     }
 }

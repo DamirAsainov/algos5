@@ -157,6 +157,11 @@ public class BST<K extends Comparable<K>, V> implements Iterable<BST.Node> {
     public boolean contains(K key){
         return conRec(key, root);
     }
+    /*
+     * Returns true if BST contains key.
+     * @param key the key to search
+     * @return true or false
+     */
     private boolean conRec(K key, Node currentNode){
         if(currentNode == null){
             return false;
