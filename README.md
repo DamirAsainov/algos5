@@ -1,6 +1,7 @@
 # Assignment 5 Documentaion
 ## 
 ## Addition practice task
+Need to find minimal common parent
 # Code
 ```java
     public K getCommonParent(K key1, K key2){
