@@ -1,5 +1,47 @@
 # Assignment 5 Documentaion
 ## 
+## Practice Task
+Need write method contains by using recursion
+# Code
+```java
+    public boolean contains(K key){
+        return conRec(key, root);
+    }
+    /*
+     * Returns true if BST contains key.
+     * @param key the key to search
+     * @return true or false
+     */
+    private boolean conRec(K key, Node currentNode){
+        if(currentNode == null){
+            return false;
+        }
+        if(currentNode.key.equals(key)){
+            return true;
+        }
+        else if(currentNode.key.compareTo(key) < 0){
+            return conRec(key, currentNode.left);
+        }
+        else{
+            return conRec(key, currentNode.right);
+        }
+    }
+```
+# Test
+```java
+        System.out.println("BST contains 8 - " + bst.contains(8));
+        System.out.println("BST contains 9 - " + bst.contains(9));
+        System.out.println("BST contains 4 - " + bst.contains(4));
+        System.out.println("BST contains 6 - " + bst.contains(6));
+```
+# Results
+Everything work correct
+```
+BST contains 8 - true
+BST contains 9 - false
+BST contains 4 - false
+BST contains 6 - true
+```
 ## Implement Binary Search Tree
 ```java
 import java.util.Iterator;
