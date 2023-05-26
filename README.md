@@ -1,5 +1,33 @@
 # Assignment 5 Documentaion
 ## 
+## Addition practice task
+# Code
+```java
+    public K getCommonParent(K key1, K key2){
+        return commonParentRec(key1, key2, root);
+    }
+    private K commonParentRec(K key1, K key2, Node currentNode){
+        if(currentNode.key.compareTo(key1) >= 0 && currentNode.key.compareTo(key2) >= 0){
+            return commonParentRec(key1, key2, currentNode.right);
+        } else if (currentNode.key.compareTo(key1) < 0 && currentNode.key.compareTo(key2) < 0) {
+            return commonParentRec(key1, key2, currentNode.left);
+        }
+        else{
+            return currentNode.key;
+        }
+    }
+```
+## Test
+```java
+System.out.println(bst.getCommonParent(7, 1));
+System.out.println(bst.getCommonParent(5, 7));
+```
+## Result
+Everything correct
+```
+2
+6
+```
 ## Practice Task
 Need write method contains by using recursion
 # Code
