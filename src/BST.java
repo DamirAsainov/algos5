@@ -154,4 +154,21 @@ public class BST<K extends Comparable<K>, V> implements Iterable<BST.Node> {
      * Returns the size of the tree.
      * @return the size
      */
+    public boolean contains(K key){
+        return conRec(key, root);
+    }
+    private boolean conRec(K key, Node currentNode){
+        if(currentNode == null){
+            return false;
+        }
+        if(currentNode.key.equals(key)){
+            return true;
+        }
+        else if(currentNode.key.compareTo(key) < 0){
+            return conRec(key, currentNode.left);
+        }
+        else{
+            return conRec(key, currentNode.right);
+        }
+    }
 }
